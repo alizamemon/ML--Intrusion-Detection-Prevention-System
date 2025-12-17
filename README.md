@@ -114,21 +114,23 @@ streamlit run dashboard.py
 Note: Exact metrics may vary due to random sampling and dataset size.
 
 ### 📁 Project Structure
+
+```text
 ML-ANSS/
-├── MachineLearningCVE/
-│   ├── rf_model.pkl
-│   ├── scaler.pkl
+├── MachineLearningCVE/       # Folder for dataset and model assets
+│   ├── rf_model.pkl          # Trained Random Forest model (Ignored by Git)
+│   ├── scaler.pkl            # Trained data scaler (Ignored by Git)
 │   └── (original dataset files)
-├── blocked_ips.csv
-├── mixed_sample.csv
-├── dashboard.py
-├── detection.py
-├── prevention.py
-├── step_merge.py
-├── step_clean.py
-├── step_split.py
-├── step_train.py
-└── README.md
+├── blocked_ips.csv           # Persistent blacklist 
+├── mixed_sample.csv          # Sample data for testing detection
+├── dashboard.py              # Main Streamlit UI
+├── detection.py              # Core ML detection logic
+├── prevention.py             # IP blocking functions
+├── step_merge.py             # Data Pipeline: Merging CSVs
+├── step_clean.py             # Data Pipeline: Cleaning & Labeling
+├── step_split.py             # Data Pipeline: Train/Test Split
+├── step_train.py             # Data Pipeline: Model Training (SMOTE + RF)
+└── README.md                 # Project documentation
 
 ### Technology Stack
 -Language: Python 3.x
