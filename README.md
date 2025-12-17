@@ -113,6 +113,12 @@ streamlit run dashboard.py
 
 Note: Exact metrics may vary due to random sampling and dataset size.
 
+### Architecture Flow
+
+<p align="center">
+ <img width="881" height="578" alt="image" src="https://github.com/user-attachments/assets/c6e7d23f-2bb0-44be-ab6e-c9bba0a55443" />
+</p>
+
 ### 📁 Project Structure
 
 ```text
@@ -134,18 +140,25 @@ ML-ANSS/
 
 ```
 
-### Technology Stack
--Language: Python 3.x
--Machine Learning: scikit-learn, imbalanced-learn (SMOTE)
--Data Processing: pandas, numpy
--Web Framework: Streamlit
+###  Technology Stack
 
-### Limitations & Future Work
--Real-time packet capture (e.g., Wireshark integration)
--Deep Learning models (LSTM, Autoencoders)
--Integration with real firewall rules (iptables)
--Multi-class attack classification
--Deployment on cloud or edge devices
+* **Language:** Python 3.10+
+* **Machine Learning:** * `scikit-learn` (Random Forest Classifier)
+    * `imbalanced-learn` (SMOTE for class balancing)
+* **Data Processing:** `pandas`, `numpy`
+* **Web Framework:** `Streamlit` (Interactive Dashboard)
+
+---
+
+###  Limitations & Future Work
+
+While this system provides a robust baseline for ML-based security, the following enhancements are planned for future versions:
+
+* **Real-Time Packet Capture:** Integration with `Scapy` or `PyShark` to analyze live network traffic instead of CSV files.
+* **Advanced Architectures:** Implementing Deep Learning models like **LSTM** (for temporal patterns) and **Autoencoders** (for anomaly detection).
+* **Hardware Integration:** Connecting the prevention module directly to system firewall rules (e.g., `iptables` on Linux or Windows Firewall API).
+* **Multi-Class Classification:** Expanding the model to identify specific attack types (DDoS, PortScan, Infiltration) rather than just a binary "Attack" vs "Benign" label.
+* **Cloud Deployment:** Containerizing the application using **Docker** for deployment on AWS or Azure Edge nodes.
 
 ### Disclaimer
 This project is for educational and research purposes only.
