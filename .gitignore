@@ -1,0 +1,11 @@
+# Trained ML Models and Scalers
+*.pkl
+*.joblib
+__pycache__/
+
+# Large Data Files (Keep these locally, but don't track on GitHub)
+*.csv
+*.zip
+
+# Virtual Environment
+.venv/
