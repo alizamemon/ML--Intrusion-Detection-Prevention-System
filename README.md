@@ -101,7 +101,8 @@ streamlit run dashboard.py
 ### Screenshots
 <img width="1365" height="626" alt="image" src="https://github.com/user-attachments/assets/93859e65-f07d-4f38-8315-18ecaf9e343b" />
 <img width="1365" height="636" alt="image" src="https://github.com/user-attachments/assets/30c6fa51-25bf-4da1-a18d-f7c016bd3e2f" />
-![Uploading image.png…]()
+<img width="1365" height="637" alt="image" src="https://github.com/user-attachments/assets/713dbe9e-e3a5-4420-a925-2b8fee1a4bea" />
+
 
 ### 📈 Model Performance 
 #### Algorithm: Random Forest
