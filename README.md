@@ -167,6 +167,3 @@ It does not replace production-grade security systems.
 #### Why This Project Matters
 This system demonstrates how Machine Learning can enhance cybersecurity by enabling intelligent detection, automated prevention, and explainable decision-making — a critical need in modern digital infrastructure.
 
-##### 📜 License
-This project is licensed under the MIT License.
-Developed by Aliza Memon
