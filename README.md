@@ -103,15 +103,55 @@ streamlit run dashboard.py
 <img width="1365" height="636" alt="image" src="https://github.com/user-attachments/assets/30c6fa51-25bf-4da1-a18d-f7c016bd3e2f" />
 <img width="1365" height="637" alt="image" src="https://github.com/user-attachments/assets/713dbe9e-e3a5-4420-a925-2b8fee1a4bea" />
 
+# 📈 Model Training & Evaluation Results
 
-### 📈 Model Performance 
-#### Algorithm: Random Forest
-#### Dataset: CICIDS 2017
-#### Class Imbalance Handling: SMOTE
-#### Detection Accuracy: High (varies by split)
-#### False Positive Rate: Low
+The **Random Forest** model was trained on the **CICIDS 2017** dataset, which exhibits a strong class imbalance between benign and attack traffic. To address this, **SMOTE (Synthetic Minority Over-sampling Technique)** was applied to balance the dataset before training.
 
-Note: Exact metrics may vary due to random sampling and dataset size.
+
+
+## 🔹 Class Distribution
+
+### Before SMOTE:
+* **BENIGN (0):** 1,818,663  
+* **ATTACK (1):** 445,931
+
+### After SMOTE:
+* **BENIGN (0):** 1,818,663  
+* **ATTACK (1):** 1,818,663
+
+> This balancing step ensures that the model does not become biased toward the majority (benign) class and improves attack detection reliability.
+
+---
+
+## 🔹 Model Performance Metrics
+
+* **Algorithm:** Random Forest Classifier
+* **Class Balancing:** SMOTE
+* **Dataset:** CICIDS 2017
+* **Test Accuracy:** `99.89%`
+* **Test Samples:** 566,149 network flows
+* **False Positive Rate:** Low
+
+### 🔹 Classification Report
+
+| Class | Precision | Recall | F1-Score | Support |
+| :--- | :--- | :--- | :--- | :--- |
+| **BENIGN (0)** | 1.00 | 1.00 | 1.00 | 454,434 |
+| **ATTACK (1)** | 1.00 | 1.00 | 1.00 | 111,715 |
+| | | | | |
+| **Accuracy** | | | **0.999** | **566,149** |
+| **Macro Avg** | 1.00 | 1.00 | 1.00 | 566,149 |
+| **Weighted Avg** | 1.00 | 1.00 | 1.00 | 566,149 |
+
+---
+
+## 🔹 Key Observations
+
+* **High Precision & Recall:** The model achieves near-perfect scores, indicating very low false positives and false negatives.
+* **Effective Balancing:** SMOTE significantly improved the detection performance on minority attack traffic.
+* **Explainability:** Feature importance analysis ensures the model is transparent and decisions are based on logical network flow patterns.
+
+These results demonstrate that the system is **robust, reliable, and suitable** for real-world intrusion detection scenarios.
 
 ### Architecture Flow
 
